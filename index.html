@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Hold'em Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Texas Hold'em Quiz</h1>
+            <p class="subtitle">Test your poker probability skills!</p>
+        </header>
+
+        <main>
+            <div id="game-area">
+                <div class="community-cards">
+                    <h2>Community Cards</h2>
+                    <div id="community-cards-display" class="cards-row"></div>
+                </div>
+
+                <div class="players-section">
+                    <h2>Players</h2>
+                    <div id="players-display" class="players-grid"></div>
+                </div>
+
+                <div class="quiz-section">
+                    <div id="question" class="question"></div>
+                    <div id="options" class="options"></div>
+                    <button id="next-question" class="btn btn-primary" style="display: none;">Next Question</button>
+                </div>
+
+                <div class="score-section">
+                    <p>Score: <span id="score">0</span></p>
+                    <p>Streak: <span id="streak">0</span></p>
+                </div>
+            </div>
+
+            <div class="settings-panel">
+                <h3>Settings</h3>
+                <label>
+                    <input type="checkbox" id="lock-community-cards">
+                    Lock community cards stage
+                </label>
+                <select id="community-cards-stage" disabled>
+                    <option value="random">Random</option>
+                    <option value="0">Pre-flop (0 cards)</option>
+                    <option value="3">Flop (3 cards)</option>
+                    <option value="4">Turn (4 cards)</option>
+                </select>
+                
+                <label>
+                    <input type="checkbox" id="lock-player-count">
+                    Lock player count
+                </label>
+                <select id="player-count" disabled>
+                    <option value="random">Random (2-5)</option>
+                    <option value="2">2 Players</option>
+                    <option value="3">3 Players</option>
+                    <option value="4">4 Players</option>
+                    <option value="5">5 Players</option>
+                </select>
+                
+                <label>
+                    Monte Carlo Simulations:
+                </label>
+                <select id="num-simulations">
+                    <option value="1000">1,000 (faster, less accurate)</option>
+                    <option value="10000" selected>10,000 (balanced)</option>
+                    <option value="50000">50,000 (slower, more accurate)</option>
+                    <option value="100000">100,000 (slowest, most accurate)</option>
+                </select>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
