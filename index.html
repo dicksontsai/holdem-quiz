@@ -11,6 +11,7 @@
         <header>
             <h1>Texas Hold'em Quiz</h1>
             <p class="subtitle">Test your poker probability skills!</p>
+            <button id="learn-hands-btn" class="btn btn-secondary">Learn Poker Hands</button>
         </header>
 
         <main>
@@ -73,6 +74,111 @@
                 </select>
             </div>
         </main>
+    </div>
+
+    <!-- Poker Hands Modal -->
+    <div id="poker-hands-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Texas Hold'em Poker Hands</h2>
+            <p class="modal-subtitle">Listed from strongest to weakest</p>
+            
+            <div class="hands-grid">
+                <div class="hand-item">
+                    <h3>1. Royal Flush</h3>
+                    <div class="hand-example">A♠ K♠ Q♠ J♠ 10♠</div>
+                    <p class="hand-description">A, K, Q, J, 10, all the same suit</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 0.0032% (1 in 30,940)
+                    </div>
+                </div>
+
+                <div class="hand-item">
+                    <h3>2. Straight Flush</h3>
+                    <div class="hand-example">9♦ 8♦ 7♦ 6♦ 5♦</div>
+                    <p class="hand-description">Five cards in a sequence, all the same suit</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 0.0279% (1 in 3,590)
+                    </div>
+                </div>
+
+                <div class="hand-item">
+                    <h3>3. Four of a Kind</h3>
+                    <div class="hand-example">J♣ J♦ J♥ J♠ 7♦</div>
+                    <p class="hand-description">Four cards of the same rank</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 0.168% (1 in 595)
+                    </div>
+                </div>
+
+                <div class="hand-item">
+                    <h3>4. Full House</h3>
+                    <div class="hand-example">3♣ 3♠ 3♦ 6♣ 6♥</div>
+                    <p class="hand-description">Three of a kind with a pair</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 2.60% (1 in 38.5)
+                    </div>
+                </div>
+
+                <div class="hand-item">
+                    <h3>5. Flush</h3>
+                    <div class="hand-example">4♠ J♠ 8♠ 2♠ 9♠</div>
+                    <p class="hand-description">Any five cards of the same suit</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 3.03% (1 in 33)
+                    </div>
+                </div>
+
+                <div class="hand-item">
+                    <h3>6. Straight</h3>
+                    <div class="hand-example">9♣ 8♠ 7♠ 6♦ 5♥</div>
+                    <p class="hand-description">Five cards in a sequence</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 4.62% (1 in 21.6)
+                    </div>
+                </div>
+
+                <div class="hand-item">
+                    <h3>7. Three of a Kind</h3>
+                    <div class="hand-example">7♣ 7♥ 7♠ K♠ 3♦</div>
+                    <p class="hand-description">Three cards of the same rank</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 4.83% (1 in 20.7)
+                    </div>
+                </div>
+
+                <div class="hand-item">
+                    <h3>8. Two Pair</h3>
+                    <div class="hand-example">4♣ 4♠ 3♣ 3♦ Q♠</div>
+                    <p class="hand-description">Two different pairs</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 23.5% (1 in 4.26)
+                    </div>
+                </div>
+
+                <div class="hand-item">
+                    <h3>9. One Pair</h3>
+                    <div class="hand-example">10♥ 10♣ 6♠ 4♥ 2♥</div>
+                    <p class="hand-description">Two cards of the same rank</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 43.8% (1 in 2.28)
+                    </div>
+                </div>
+
+                <div class="hand-item">
+                    <h3>10. High Card</h3>
+                    <div class="hand-example">A♦ 10♦ 9♠ 5♣ 4♣</div>
+                    <p class="hand-description">No matching cards</p>
+                    <div class="probability-info">
+                        <span class="prob-label">Probability:</span> 17.4% (1 in 5.74)
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <p><strong>Note:</strong> In Texas Hold'em, you use the best 5-card combination from your 2 hole cards and 5 community cards (7 cards total).</p>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>

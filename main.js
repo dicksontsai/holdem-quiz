@@ -1,3 +1,24 @@
+// Modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('poker-hands-modal');
+    const btn = document.getElementById('learn-hands-btn');
+    const span = document.getElementsByClassName('close')[0];
+
+    btn.onclick = function() {
+        modal.style.display = 'block';
+    }
+
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+});
+
 // Card definitions
 const SUITS = ["hearts", "diamonds", "clubs", "spades"];
 const RANKS = [
